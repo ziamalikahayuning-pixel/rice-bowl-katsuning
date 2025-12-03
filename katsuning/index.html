@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>katsuning</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    header {
+      background-color: #ebd077;
+      color: white;
+      padding: 1px 0;
+    }
+    .produk {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    
+    button:hover {
+      background-color: #7891e4;
+    }
+    footer {
+      color: rgb(24, 1, 1);
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Katsuning</h1>
+    <p>Makanan cepat saji & siap santap!</p>
+  </header>
+
+  <main>
+    <div class="produk">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/75/19/66/751966b68dfe64487678e6f15122a153.jpg" alt="Katsu Reechese Sausce">
+        <h3>Katsu Reechese Sausce</h3>
+        <p>Rp. 15.000</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/a6/32/be/a632bea11d77accbacdeae59f8c8ec62.jpg" alt="Katsu Sambel Matah">
+        <h3>Katsu Sambel Matah</h3>
+        <p>Rp. 15.000</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/00/93/76/009376e052ffe222cb5aea37d2a60b38.jpg" alt="Ayam Teriyaki">
+        <h3>Ayam Teriyaki</h3>
+        <p>Rp. 15.000</p>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/d4/f7/06/d4f706177fa532a0e8da8a7f4da1b3bb.jpg" alt="Ayam Popcorn">
+        <h3>Ayam Popcorn</h3>
+        <p>Rp. 15.000</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Pesan Sekarang: <a href="https://wa.me/6285187886609" style="color: #4CAF50; text-decoration: none;">Whatsapp</a></p>
+    <p>&copy;Katsuning</p>
+  </footer>
+
+  <script>
+    function beli(namaProduk) {
+      const nomor = '6285187886609'
+      const pesan = encodeURIComponent(`Halo, saya ingin membeli ${namaProduk}`);
+      window.location.href = `https://wa.me/6285187886609?text=${pesan}`;
+    }
+  </script>
+</body>
+</html>
